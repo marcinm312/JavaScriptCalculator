@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2" />
+		<title>Kalkulator</title>
+		<style type="text/css">
+			#wynik {
+				font-size: 50px;
+				font-weight: bold;
+				color: red;
+			}
+		</style>
+		<script type="text/javascript">
+			function dodawanie() {
+				var a = parseInt(document.forms["kalkulator"].elements["a"].value);
+				var b = parseInt(document.forms["kalkulator"].elements["b"].value);
+				var c = parseInt(a + b);
+				document.getElementById("wynik").innerHTML = c;
+			}
+		</script>
+		<script type="text/javascript">
+			function odejmowanie() {
+				var a = parseInt(document.forms["kalkulator"].elements["a"].value);
+				var b = parseInt(document.forms["kalkulator"].elements["b"].value);
+				var c = parseInt(a - b);
+				document.getElementById("wynik").innerHTML = c;
+			}
+		</script>
+		<script type="text/javascript">
+			function mnozenie() {
+				var a = parseInt(document.forms["kalkulator"].elements["a"].value);
+				var b = parseInt(document.forms["kalkulator"].elements["b"].value);
+				var c = parseInt(a * b);
+				document.getElementById("wynik").innerHTML = c;
+			}
+		</script>
+		<script type="text/javascript">
+			function dzielenie() {
+				var a = parseInt(document.forms["kalkulator"].elements["a"].value);
+				var b = parseInt(document.forms["kalkulator"].elements["b"].value);
+				var c = parseInt(a / b);
+				document.getElementById("wynik").innerHTML = c;
+			}
+		</script>
+		<script type="text/javascript">
+			function modulo() {
+				var a = parseInt(document.forms["kalkulator"].elements["a"].value);
+				var b = parseInt(document.forms["kalkulator"].elements["b"].value);
+				var c = parseInt(a % b);
+				document.getElementById("wynik").innerHTML = c;
+			}
+		</script>
+		<script type="text/javascript">
+			function potega() {
+				var a = parseInt(document.forms["kalkulator"].elements["a"].value);
+				var b = parseInt(document.forms["kalkulator"].elements["b"].value);
+				var c = parseInt(Math.pow(a, b));
+				document.getElementById("wynik").innerHTML = c;
+			}
+		</script>
+		<script type="text/javascript">
+			function pierwiastekkw() {
+				var d = parseInt(document.forms["inne"].elements["d"].value);
+				var e = Math.sqrt(d);
+				document.getElementById("wynik").innerHTML = e;
+			}
+		</script>
+		<script type="text/javascript">
+			function logarytm() {
+				var d = parseInt(document.forms["inne"].elements["d"].value);
+				var e = Math.log(d);
+				document.getElementById("wynik").innerHTML = e;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Kalkulator w Javascript</h1>
+		<br/>
+		<p>
+			<form name="kalkulator">
+				<input type="number" name="a">
+				<input type="button" value="+" onclick="dodawanie()">
+				<input type="button" value="-" onclick="odejmowanie()">
+				<input type="button" value="*" onclick="mnozenie()">
+				<input type="button" value="/" onclick="dzielenie()">
+				<input type="button" value="reszta z dzielenia przez..." onclick="modulo()">
+				<input type="button" value="do potęgi..." onclick="potega()">
+				<input type="number" name="b">
+			</form>
+		</p>
+		<p>
+			<form name="inne">
+				<input type="number" name="d">
+				<input type="button" value="pierwiastek kwadratowy" onclick="pierwiastekkw()">
+				<input type="button" value="logarytm naturalny" onclick="logarytm()">
+			</form>
+		</p>
+		<strong>Wynik:</strong>
+		<div id="wynik"></div>
+	</body>
+</html>
+
