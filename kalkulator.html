@@ -1,8 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="pl">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2" />
+		<meta charset="UTF-8" />
 		<title>Kalkulator</title>
 		<style type="text/css">
 			#wynik {
@@ -13,63 +12,63 @@
 		</style>
 		<script type="text/javascript">
 			function dodawanie() {
-				var a = parseInt(document.forms["kalkulator"].elements["a"].value);
-				var b = parseInt(document.forms["kalkulator"].elements["b"].value);
-				var c = parseInt(a + b);
+				let a = parseFloat(document.forms["kalkulator"].elements["a"].value);
+				let b = parseFloat(document.forms["kalkulator"].elements["b"].value);
+				let c = a + b;
 				document.getElementById("wynik").innerHTML = c;
 			}
 		</script>
 		<script type="text/javascript">
 			function odejmowanie() {
-				var a = parseInt(document.forms["kalkulator"].elements["a"].value);
-				var b = parseInt(document.forms["kalkulator"].elements["b"].value);
-				var c = parseInt(a - b);
+				let a = parseFloat(document.forms["kalkulator"].elements["a"].value);
+				let b = parseFloat(document.forms["kalkulator"].elements["b"].value);
+				let c = a - b;
 				document.getElementById("wynik").innerHTML = c;
 			}
 		</script>
 		<script type="text/javascript">
 			function mnozenie() {
-				var a = parseInt(document.forms["kalkulator"].elements["a"].value);
-				var b = parseInt(document.forms["kalkulator"].elements["b"].value);
-				var c = parseInt(a * b);
+				let a = parseFloat(document.forms["kalkulator"].elements["a"].value);
+				let b = parseFloat(document.forms["kalkulator"].elements["b"].value);
+				let c = a * b;
 				document.getElementById("wynik").innerHTML = c;
 			}
 		</script>
 		<script type="text/javascript">
 			function dzielenie() {
-				var a = parseInt(document.forms["kalkulator"].elements["a"].value);
-				var b = parseInt(document.forms["kalkulator"].elements["b"].value);
-				var c = parseInt(a / b);
+				let a = parseFloat(document.forms["kalkulator"].elements["a"].value);
+				let b = parseFloat(document.forms["kalkulator"].elements["b"].value);
+				let c = a / b;
 				document.getElementById("wynik").innerHTML = c;
 			}
 		</script>
 		<script type="text/javascript">
 			function modulo() {
-				var a = parseInt(document.forms["kalkulator"].elements["a"].value);
-				var b = parseInt(document.forms["kalkulator"].elements["b"].value);
-				var c = parseInt(a % b);
+				let a = parseFloat(document.forms["kalkulator"].elements["a"].value);
+				let b = parseFloat(document.forms["kalkulator"].elements["b"].value);
+				let c = a % b;
 				document.getElementById("wynik").innerHTML = c;
 			}
 		</script>
 		<script type="text/javascript">
 			function potega() {
-				var a = parseInt(document.forms["kalkulator"].elements["a"].value);
-				var b = parseInt(document.forms["kalkulator"].elements["b"].value);
-				var c = parseInt(Math.pow(a, b));
+				let a = parseFloat(document.forms["kalkulator"].elements["a"].value);
+				let b = parseFloat(document.forms["kalkulator"].elements["b"].value);
+				let c = Math.pow(a, b);
 				document.getElementById("wynik").innerHTML = c;
 			}
 		</script>
 		<script type="text/javascript">
 			function pierwiastekkw() {
-				var d = parseInt(document.forms["inne"].elements["d"].value);
-				var e = Math.sqrt(d);
+				let d = parseFloat(document.forms["inne"].elements["d"].value);
+				let e = Math.sqrt(d);
 				document.getElementById("wynik").innerHTML = e;
 			}
 		</script>
 		<script type="text/javascript">
 			function logarytm() {
-				var d = parseInt(document.forms["inne"].elements["d"].value);
-				var e = Math.log(d);
+				let d = parseFloat(document.forms["inne"].elements["d"].value);
+				let e = Math.log(d);
 				document.getElementById("wynik").innerHTML = e;
 			}
 		</script>
@@ -79,19 +78,19 @@
 		<br/>
 		<p>
 			<form name="kalkulator">
-				<input type="number" name="a">
+				<input type="number" name="a" step="any">
 				<input type="button" value="+" onclick="dodawanie()">
 				<input type="button" value="-" onclick="odejmowanie()">
 				<input type="button" value="*" onclick="mnozenie()">
 				<input type="button" value="/" onclick="dzielenie()">
 				<input type="button" value="reszta z dzielenia przez..." onclick="modulo()">
-				<input type="button" value="do potęgi..." onclick="potega()">
-				<input type="number" name="b">
+				<input type="button" value="do potÄgi..." onclick="potega()">
+				<input type="number" name="b" step="any">
 			</form>
 		</p>
 		<p>
 			<form name="inne">
-				<input type="number" name="d">
+				<input type="number" name="d" step="any">
 				<input type="button" value="pierwiastek kwadratowy" onclick="pierwiastekkw()">
 				<input type="button" value="logarytm naturalny" onclick="logarytm()">
 			</form>
