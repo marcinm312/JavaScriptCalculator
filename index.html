@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Kalkulator</title>
+</head>
+
+<body>
+    <h1>Kalkulator w Javascript</h1>
+    <p>
+        <form name="calculator">
+            <input type="number" name="a" step="any">
+            <input type="button" value="+" onclick="addition()">
+            <input type="button" value="-" onclick="subtraction()">
+            <input type="button" value="*" onclick="multiplication()">
+            <input type="button" value="/" onclick="division()">
+            <input type="button" value="reszta z dzielenia przez..." onclick="modulo()">
+            <input type="button" value="do potęgi..." onclick="exponentiation()">
+            <input type="number" name="b" step="any">
+        </form>
+    </p>
+    <p>
+        <form name="other">
+            <input type="number" name="d" step="any">
+            <input type="button" value="pierwiastek kwadratowy" onclick="squareRoot()">
+            <input type="button" value="logarytm naturalny" onclick="logarithm()">
+        </form>
+    </p>
+    <p class="bold">Wynik:</p>
+    <div id="result" class="result"></div>
+</body>
+<script type="text/javascript" src="/js/scripts.js"></script>
+
+</html>
